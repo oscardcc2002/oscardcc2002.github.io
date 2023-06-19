@@ -18,28 +18,28 @@ Have fun creating your portfolio on this template!!! -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
     <!-- Title: add your Portfolio websites's title here -->
-    <title>[Your name here] | Developer</title>
+    <title>Óscar del Campo Carpio | Frontend y Backend Developer</title>
 
     <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="[username], [name], skill" />
+    <meta name="keywords" content="Pitarcus, Marc, Game developer, Unity, C#" />
 
     <!-- Improve your SEO by adding a small descrption of you -->
-    <meta name="description" content="[Your name here] | Developer" />
+    <meta name="description" content="Marc Pitarch Dos Santos | Game Developer" />
 
     <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+    <link rel="icon" type="image/png" href="./assets/LogoPitarcus_P_transparent_small.png" />
 
     <!-- Add your primary-theme color for the value of content -->
-    <meta name="theme-color" content="#36d1dc" />
+    <meta name="theme-color" content="#00061b" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <!-- Fill content with the URL of this portfolio you'll host -->
     <meta property="og:url" content="https://devfolio.js.org/" />
     <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="[Your name here] | Developer" />
+    <meta property="og:title" content="Marc Pitarch | Game Developer" />
     <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Made using DevFolio Template" />
+    <meta property="og:description" content="Game dev portfolio" />
     <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
       so that a thumbnail image of your portfolio is shown while shared on other platform -->
     <meta
@@ -52,7 +52,7 @@ Have fun creating your portfolio on this template!!! -->
     <!-- Again fill content attr with the URL of this portfolio you'll host -->
     <meta property="twitter:url" content="https://devfolio.js.org" />
     <!-- Recommended to use the same text used within <title> element -->
-    <meta property="twitter:title" content="[Your name here] | Developer" />
+    <meta property="twitter:title" content="Marc Pitarch | Game Developer" />
     <!-- short description that shows up while your portfolio is shared -->
     <meta
       property="twitter:description"
@@ -82,35 +82,22 @@ Have fun creating your portfolio on this template!!! -->
       type="text/javascript"
       src="./javascript/scrollveal.js"
     ></script>
-
-    <!-- Remove Google Analytics once you have your portfolio website set-up -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
+      defer
+      src="./javascript/categoryfilter.js"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("js", new Date())
-
-      gtag("config", "UA-122228201-4")
-    </script>
-    <!-- End of Google Analytics -->
   </head>
   <body>
     <!-- Hero Section -->
     <div id="hero">
       <section class="container">
         <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Your Name</span>
+          Hey, my name is <span class="text-color-main name">Óscar del Campo Carpio</span>
           <br />
-          I'm the Unknown Developer.
+          I'm a passionate Frontend y Backend developer.
         </h1>
         <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+          <a class="cta-btn cta-btn--hero" href="#about">Welcome to my portfolio</a>
         </p>
       </section>
       <a href="#about" class="scroll-down-link" aria-label="scroll-down">
@@ -127,7 +114,7 @@ Have fun creating your portfolio on this template!!! -->
           <div class="about-wrapper__image">
             <img
               class="img-fluid"
-              src="./assets/profile.png"
+              src="./assets/profile1.jpg"
               alt="Profile Image"
               width="450"
               height="350"
@@ -135,19 +122,28 @@ Have fun creating your portfolio on this template!!! -->
           </div>
           <div class="about-wrapper__info">
             <p class="about-wrapper__info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus quae repellat, ad omnis distinctio velit saepe expedita
-              architecto cumque veritatis adipisci. Sapiente non, saepe hic
-              adipisci doloribus quisquam recusandae et.
+                Passionate and self-taught
+              self-taught, focused on
+              learning and growing in the
+              programming field,
+              with solid knowledge in
+              languages such as Java,
+              Javascript, PHP and a great
+              willingness to face
+              new challenges.
+
             </p>
+            <!-- Párrafo adicional
             <p class="about-wrapper__info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              obcaecati doloribus qui praesentium quae veniam esse mollitia
-              consequuntur nisi minima quasi et fugit quidem enim recusandae
-              delectus, iusto culpa rerum?
+              As a student I have had the chance to create polished games and experiences
+              going through different roles and working with people from various backgrounds.
+              My main interests are <b>programming, graphics and sound</b>. Below you can find my resume and
+              projects I have been completing in recent years. And <a target="_blank" href="https://pitarcus.itch.io/" color="#9ee7ff" visited="#9effae">here</a> you can peek through all my games!
+
             </p>
+          -->
             <span class="about-wrapper__cta">
-              <a href="#" class="cta-btn cta-btn--resume">View Resume</a>
+              <a target="_blank" href="./assets/CV_MarcPitarchDosSantos_gamedev.pdf" class="cta-btn cta-btn--resume">View Resume</a>
             </span>
           </div>
         </div>
@@ -161,35 +157,61 @@ Have fun creating your portfolio on this template!!! -->
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">Projects</h2>
 
-          <!-- Each .row is a project -->
-          <article class="row">
+          <div class="filters"> 
+            <div class="project-wrapper__filters-category">
+              <button type="button" class="project-filter active" data-filter="all">All</button>
+              <button type="button" class="project-filter" data-filter="game">Games</button>
+              <button type="button" class="project-filter" data-filter="tool">Tools</button>
+            </div>
+          </div>
+
+          <!-- GRASS -->
+          <article class="row project-item">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <h3 class="project-wrapper__text-title">Mydieta</h3>
+
+              <div class="project-wrapper__text-labels">
+                <!--
+                <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+                <label class="label tool"><i class="fa fa-wrench" aria-hidden="true"></i> Tool</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+                <label class="label shaders"> Shaders</label>
+                <label class="label vr"><i class="fa-solid fa-vr-cardboard" aria-hidden="true"></i> VR</label>
+                <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
+                <label class="label modeling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modeling</label>
+                <label class="label c"><i class="fa-solid fa-c" aria-hidden="true"></i></label>
+                -->
+                <label class="label tool"><i class="fa fa-wrench" aria-hidden="true"></i> Tool</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Java</label>
+                <label class="label shaders"> JavaFX</label>
+              </div>
+              
               <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
+                The final project for my Videogame Design and Development bachelor's. 
+                It features tools for customized rendering of grass with the help of <b>compute shaders</b>, which I used to make similar grass to <i>Breath of the Wild</i>.
+                A <b>fluid simulation</b> based wind system creates dynamic interaction with motors, inspired by <i>God of War</i>.
               </p>
               <div class="project-wrapper__text-btns">
-                <a
+                <!--<a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="cta-btn cta-btn--hero cta-btn--projects"
                   >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
+                >-->
+                <a href="https://github.com/oscardcc2002/appdieta" 
+                target="_blank" 
+                class="cta-btn cta-btn--hero cta-btn--projects">
+                Source Code
+                </a>
               </div>
             </div>
 
             <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/oscardcc2002/appdieta" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
                   <img
-                    src="./assets/project.png"
+                    src="./assets/project1.png"
                     class="img-fluid"
                     alt="Project Image"
                     width="1366"
@@ -201,35 +223,41 @@ Have fun creating your portfolio on this template!!! -->
           </article>
           <!-- /END Project -->
 
-          <!-- Each .row is a project -->
-          <article class="row">
+          <!-- EDGE OF TOMORROW -->
+          <article class="row project-item">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <h3 class="project-wrapper__text-title">Edge of Tomorrow VR - 2022</h3>
+
+              <div class="project-wrapper__text-labels">
+                <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+                <label class="label shaders"> Shaders</label>
+                <label class="label vr"><i class="fa-solid fa-vr-cardboard" aria-hidden="true"></i> VR</label>
+              </div>
+
               <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
+                During my time at Hanze's Hogeschool in Groningen I got the chance to <b>direct and develop
+                a VR game</b> with a team of 5 people to help the northern police of Groningen raise awareness of knife crime.
               </p>
               <div class="project-wrapper__text-btns">
                 <a
-                  href="#"
+                  href="https://pitarcus.itch.io/edgeoftomorrow"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
+                  >itch.io</a
                 >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
+                <a href="https://github.com/Sk0rpi/drop-that-knife" target="_blank" class="cta-btn text-color-main"
                   >Source Code</a
                 >
               </div>
             </div>
 
             <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://pitarcus.itch.io/edgeoftomorrow" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
                   <img
-                    src="./assets/project.png"
+                    src="./assets/EdgeOfTomorrow_knife.jpg"
                     class="img-fluid"
                     alt="Project Image"
                     width="1366"
@@ -241,35 +269,39 @@ Have fun creating your portfolio on this template!!! -->
           </article>
           <!-- /END Project -->
 
-          <!-- Each .row is a project -->
-          <article class="row">
+          <!-- ANCIENT -->
+          <article class="row project-item">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <h3 class="project-wrapper__text-title">ANCIENT - Indie Spain Jam 2022</h3>
+
+            <div class="project-wrapper__text-labels">
+              <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+              <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+              <label class="label shaders"> Shaders</label>
+              <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
+            </div>
+
               <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
+                A team of 6 students of the degree worked remotely on the development of ANCIENT
+                a puzzle sokoban style jam game. Sound design and implementation using FMOD, music, VFX and
+                game design. We achieved <b>12th place</b> out of 172 entries!
               </p>
               <div class="project-wrapper__text-btns">
                 <a
-                  href="#"
+                  href="https://slinon.itch.io/ancient"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
+                  >itch.io</a
                 >
               </div>
             </div>
 
             <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://slinon.itch.io/ancient" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
                   <img
-                    src="./assets/project.png"
+                    src="./assets/ancient title.png"
                     class="img-fluid"
                     alt="Project Image"
                     width="1366"
@@ -280,6 +312,146 @@ Have fun creating your portfolio on this template!!! -->
             </div>
           </article>
           <!-- /END Project -->
+
+          <!-- BLUE BLOOD -->
+          <article class="row project-item">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Blue Blood - 2022</h3>
+
+              <div class="project-wrapper__text-labels">
+                <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+                <label class="label shaders"> Shaders</label>
+                <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
+                <label class="label modeling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modeling</label>
+              </div>
+
+              <p class="project-wrapper__text-info">
+                My biggest game to date, <b>full solo development</b>. Custom character controller,
+                animation, game desing, shaders, sound and music. Originated as a university project
+                for the subject Game Engines.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="https://pitarcus.itch.io/blue-blood"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >itch.io</a
+                >
+                <a href="https://github.com/Pitarcus/Blue-Fox" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="https://pitarcus.itch.io/blue-blood" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/blueblood.jpg"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- EL FORN DE BABALÀ -->
+          <article class="row project-item">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">El Forn de Babalà - 2021</h3>
+
+              <div class="project-wrapper__text-labels">
+                <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+                <label class="label shaders"> Shaders</label>
+                <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
+              </div>
+
+              <p class="project-wrapper__text-info">
+                University project of a joined triple subject assignment.
+                Raising awareness of rural problems. Game design, art supervision, 
+                movement, rythm game, music, sound, team management.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="https://hagso.itch.io/el-forn-de-babal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >itch.io</a
+                >
+                <a href="https://github.com/Dastdjc/El-forn-de-Babala-" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="https://hagso.itch.io/el-forn-de-babal" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/elforn.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Hen & FOX -->
+          <article class="row project-item">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Hen & Fox - 2020</h3>
+
+              <div class="project-wrapper__text-labels">
+                <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+                <label class="label c"><i class="fa-solid fa-c" aria-hidden="true"></i></label>
+              </div>
+
+              <p class="project-wrapper__text-info">
+                Game for 'Game consoles' subject in University. Use of devkitPro and 
+                NightFoxLB for the development of a DS game in C.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="https://pitarcus.itch.io/hen-fox"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >itch.io</a
+                >
+                <a href="https://github.com/Pitarcus/HenAndFox-DSGAME" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="https://pitarcus.itch.io/hen-fox" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/HnFscreenshot2.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
         </div>
       </div>
     </section>
@@ -290,8 +462,12 @@ Have fun creating your portfolio on this template!!! -->
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a href="#" class="cta-btn cta-btn--resume">Call to Action</a>
+          <p class="contact-wrapper__text">Hope you liked it <3</p>
+          <a rel="noreferrer"
+          target="_blank"
+          class="cta-btn cta-btn--resume"
+          href="mailto:pitarcusmp@gmail.com">
+          Contact me</a>
         </div>
       </div>
     </section>
@@ -304,8 +480,17 @@ Have fun creating your portfolio on this template!!! -->
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
+          
           <a
-            href="#!"
+            href="https://pitarcus.itch.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="itch-io"
+          >
+            <i class="fa-brands fa-itch-io"></i>
+          </a>
+          <a
+            href="https://twitter.com/pitarcus"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="twitter"
@@ -313,23 +498,16 @@ Have fun creating your portfolio on this template!!! -->
             <i class="fa-brands fa-twitter"></i>
           </a>
           <a
-            href="#!"
+            href="https://www.instagram.com/pitarcus/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="instagram"
           >
             <i class="fa-brands fa-instagram"></i>
           </a>
+         
           <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="codepen"
-          >
-            <i class="fa-brands fa-codepen"></i>
-          </a>
-          <a
-            href="#!"
+            href="https://www.linkedin.com/in/marc-pitarch-dos-santos-ba530223a/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="linkedin"
@@ -337,7 +515,7 @@ Have fun creating your portfolio on this template!!! -->
             <i class="fa-brands fa-linkedin"></i>
           </a>
           <a
-            href="#!"
+            href="https://github.com/Pitarcus"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="github"
